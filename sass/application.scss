@@ -1,0 +1,49 @@
+@import "reset";
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.image-grid {
+  @include clearfix;
+
+  .image-gird__item {
+    width: 20%;
+    float: left;
+  }
+
+}
+
+
+.box {
+  padding:  5px 5px 0px 5px;
+}
+
+.box__figure {
+  img {
+    display: block;
+  }
+}
+
+
+.image-expand {
+  width: 500%;
+}
+
+.image-expand {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  max-height: 600px;
+}
