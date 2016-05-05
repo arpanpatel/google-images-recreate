@@ -22,110 +22,132 @@
           <div class="image-gird__item">
               <div class="box">
                  <figure class="box__figure">
-                   <img src="images/tumb-1.jpg" alt="">
+                   <img src="images/tumb-2.jpg" alt="">
                  </figure>
               </div> <!-- end .box -->
 
               <div class="image-expand">
-                 <img src="images/large-1.jpg" alt="">
+                 <img src="images/large-2.jpg" alt="">
               </div> <!-- end .image-expand -->
           </div> <!-- end .image-gird__item -->
 
           <div class="image-gird__item">
               <div class="box">
                  <figure class="box__figure">
-                   <img src="images/tumb-1.jpg" alt="">
+                   <img src="images/tumb-3.jpg" alt="">
                  </figure>
               </div> <!-- end .box -->
 
               <div class="image-expand">
-                 <img src="images/large-1.jpg" alt="">
+                 <img src="images/large-3.jpg" alt="">
               </div> <!-- end .image-expand -->
           </div> <!-- end .image-gird__item -->
 
           <div class="image-gird__item">
               <div class="box">
                  <figure class="box__figure">
-                   <img src="images/tumb-1.jpg" alt="">
+                   <img src="images/tumb-4.jpg" alt="">
                  </figure>
               </div> <!-- end .box -->
 
               <div class="image-expand">
-                 <img src="images/large-1.jpg" alt="">
+                 <img src="images/large-4.jpg" alt="">
               </div> <!-- end .image-expand -->
           </div> <!-- end .image-gird__item -->
 
           <div class="image-gird__item">
               <div class="box">
                  <figure class="box__figure">
-                   <img src="images/tumb-1.jpg" alt="">
+                   <img src="images/tumb-5.jpg" alt="">
                  </figure>
               </div> <!-- end .box -->
 
               <div class="image-expand">
-                 <img src="images/large-1.jpg" alt="">
+                 <img src="images/large-5.jpg" alt="">
               </div> <!-- end .image-expand -->
           </div> <!-- end .image-gird__item -->
           <div class="image-gird__item">
               <div class="box">
                  <figure class="box__figure">
-                   <img src="images/tumb-1.jpg" alt="">
+                   <img src="images/tumb-6.jpg" alt="">
                  </figure>
               </div> <!-- end .box -->
 
               <div class="image-expand">
-                 <img src="images/large-1.jpg" alt="">
-              </div> <!-- end .image-expand -->
-          </div> <!-- end .image-gird__item -->
-
-          <div class="image-gird__item">
-              <div class="box">
-                 <figure class="box__figure">
-                   <img src="images/tumb-1.jpg" alt="">
-                 </figure>
-              </div> <!-- end .box -->
-
-              <div class="image-expand">
-                 <img src="images/large-1.jpg" alt="">
+                 <img src="images/large-6.jpg" alt="">
               </div> <!-- end .image-expand -->
           </div> <!-- end .image-gird__item -->
 
           <div class="image-gird__item">
               <div class="box">
                  <figure class="box__figure">
-                   <img src="images/tumb-1.jpg" alt="">
+                   <img src="images/tumb-7.jpg" alt="">
                  </figure>
               </div> <!-- end .box -->
 
               <div class="image-expand">
-                 <img src="images/large-1.jpg" alt="">
+                 <img src="images/large-7.jpg" alt="">
+              </div> <!-- end .image-expand -->
+
+          </div> <!-- end .image-gird__item -->
+
+          <div class="image-gird__item">
+              <div class="box">
+                 <figure class="box__figure">
+                   <img src="images/tumb-8.jpg" alt="">
+                 </figure>
+              </div> <!-- end .box -->
+
+              <div class="image-expand">
+                 <img src="images/large-8.jpg" alt="">
               </div> <!-- end .image-expand -->
           </div> <!-- end .image-gird__item -->
 
           <div class="image-gird__item">
               <div class="box">
                  <figure class="box__figure">
-                   <img src="images/tumb-1.jpg" alt="">
+                   <img src="images/tumb-9.jpg" alt="">
                  </figure>
               </div> <!-- end .box -->
 
               <div class="image-expand">
-                 <img src="images/large-1.jpg" alt="">
+                 <img src="images/large-9.jpg" alt="">
               </div> <!-- end .image-expand -->
           </div> <!-- end .image-gird__item -->
 
           <div class="image-gird__item">
               <div class="box">
                  <figure class="box__figure">
-                   <img src="images/tumb-1.jpg" alt="">
+                   <img src="images/tumb-10.jpg" alt="">
                  </figure>
               </div> <!-- end .box -->
 
               <div class="image-expand">
-                 <img src="images/large-1.jpg" alt="">
+                 <img src="images/large-10.jpg" alt="">
               </div> <!-- end .image-expand -->
           </div> <!-- end .image-gird__item -->
 
       </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script>
+  window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+  </script>
+  <script>
+  ;(function($) {
+    $('.image-gird__item').addClass('is-collapse');
+    $('.image-gird__item').click(function(){
+       console.log("you just click on me");
+       if($(this).hasClass('is-expanded')) {
+          $(this).removeClass('is-expanded').addClass('is-collapse');
+       } else {
+         $('.image-gird__item').removeClass('is-expanded').addClass('is-collapse');
+         $(this).removeClass('is-collapse').addClass('is-expanded');
+       }
+    });
+
+  })(jQuery);
+  </script>
+      <script type="text-javascript" src="js/application.js"></script>
   </body>
 </html>
