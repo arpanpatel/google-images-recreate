@@ -76,6 +76,7 @@ img {
 .box {
   position: relative;
   padding: 5px 5px 5px 5px;
+  display: block;
 }
 
 .box__figure img {
@@ -121,6 +122,10 @@ img {
   max-height: 0;
   width: 500%;
   transition: max-height 0.3s ease-in, margin-top 0.2s ease-in;
+}
+
+.image-gird__item {
+  box-sizing: border-box;
 }
 
 .image-gird__item:nth-of-type(5n+6) {

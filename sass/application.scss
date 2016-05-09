@@ -29,6 +29,7 @@ img {
 .box {
   position: relative;
   padding:  5px 5px 5px 5px;
+  display: block;
 }
 
 .box__figure {
@@ -41,7 +42,6 @@ img {
   .image-expand {
     max-height: 600px;
     max-height: inherit;
-    //padding: 30px 80px;
     margin-top: 15px;
   }
 
@@ -88,6 +88,7 @@ img {
 }
 
 .image-gird__item {
+  box-sizing: border-box;
   &:nth-of-type(5n+6) {
     clear: left;
   }
