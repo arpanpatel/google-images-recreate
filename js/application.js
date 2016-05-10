@@ -32,52 +32,47 @@
      }
   });
 
-  // Next Image
-  $('.gal-next').on('click', function(e) {
+  function navigate(direction, that, event) {
 
-      e.preventDefault();
-      e.stopPropagation();
+    event.preventDefault();
+    event.stopPropagation();
+    
+    // find current grid
+    var $currentGirdItem  = that.closest('.image-gird__item'),
+        $nextGirdItem = '';
 
-      // find current grid
-      var $currentGirdItem  = $(this).closest('.image-gird__item'),
+    if (direction == "next") {
 
       // find next grid
       $nextGirdItem = $currentGirdItem.next('.image-gird__item');
 
-      // close current grid item
-      $currentGirdItem.removeClass('is-expanded').addClass('is-collapse');
+    } else if (direction == "prev") {
 
-      // open next grid item
-      $nextGirdItem.removeClass('is-collapse').addClass('is-expanded');
+      // find prev grid
+      $nextGirdItem = $currentGirdItem.prev('.image-gird__item');
 
-      // bind big image to next grid
-      var $nextBigImg  = $nextGirdItem.find('a').data('big');
-      $('.big-img').attr('src', $nextBigImg);
+    }
 
+    // close current grid item
+    $currentGirdItem.removeClass('is-expanded').addClass('is-collapse');
+
+    // open next grid item
+    $nextGirdItem.removeClass('is-collapse').addClass('is-expanded');
+
+    // bind big image to next grid
+    var $nextBigImg  = $nextGirdItem.find('a').data('big');
+    $('.big-img').attr('src', $nextBigImg);
+
+  }
+
+  // Next Image
+  $('.gal-next').on('click', function(event) {
+    navigate("next", $(this), event);
   });
 
  // Prev Image
-  $('.gal-prev').on('click', function(e) {
-
-      e.preventDefault();
-      e.stopPropagation();
-
-      // find current grid
-      var $currentGirdItem  = $(this).closest('.image-gird__item'),
-
-      // find next grid
-      $nextGirdItem = $currentGirdItem.prev('.image-gird__item');
-
-      // close current grid item
-      $currentGirdItem.removeClass('is-expanded').addClass('is-collapse');
-
-      // open next grid item
-      $nextGirdItem.removeClass('is-collapse').addClass('is-expanded');
-
-      // bind big image to next grid
-      var $nextBigImg  = $nextGirdItem.find('a').data('big');
-      $('.big-img').attr('src', $nextBigImg);
-
+  $('.gal-prev').on('click', function(event) {
+     navigate("prev", $(this), event);
   });
 
 })(jQuery);
