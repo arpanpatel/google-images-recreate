@@ -75,4 +75,28 @@
      navigate("prev", $(this), event);
   });
 
+// Next previous using left/right arrow key
+ $(document).on('keyup', function (event) {
+
+    
+    if (event.keyCode == 37) { 
+ 
+        // Find and expand content previous button
+        $currentEl = $('.image-gird__item.is-expanded').find('.gal-prev');
+
+        //call navigate function for previous section
+        navigate("prev", $currentEl, event);
+
+    } else if (event.keyCode == 39) {
+
+        // Find and expand content next button
+        $currentEl = $('.image-gird__item.is-expanded').find('.gal-next');
+
+        //call navigate function for next section        
+        navigate("next", $currentEl, event);
+
+    }
+
+});
+ 
 })(jQuery);
